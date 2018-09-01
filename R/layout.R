@@ -154,7 +154,7 @@ miniTitleBar <- function(title, left = NULL, right = NULL) {
 #' @rdname miniTitleBar
 #' @export
 gadgetTitleBar <- function(title, left = miniTitleBarCancelButton(),
-  right = miniTitleBarButton("done", "Done", primary = TRUE)) {
+  right = miniTitleBarButton("done", "确定", primary = TRUE)) {
 
   miniTitleBar(title, left, right)
 }
@@ -186,7 +186,7 @@ miniTitleBarButton <- function(inputId, label, primary = FALSE) {
 #'   but the user can also invoke it by hitting the Escape key.
 #' @rdname miniTitleBar
 #' @export
-miniTitleBarCancelButton <- function(inputId = "cancel", label = "Cancel",
+miniTitleBarCancelButton <- function(inputId = "cancel", label = "取消",
   primary = FALSE) {
 
   escapeHandler <- singleton(tags$head(tags$script(sprintf(
